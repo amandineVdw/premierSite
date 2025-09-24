@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowBun - Réinventez votre street-food</title>
+    <meta name="description" content="Foodtruck tendance spécialisé en buns lumineux et street food gourmet. Découvrez nos burgers vegan, options végétariennes et service click & collect.">
+    <meta name="keywords" content="foodtruck tendance, street food gourmet, burger vegan, GlowBun, Click & Collect foodtruck">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coral: "#FF6B4A",
+                        violet: "#9B6DFF",
+                        yellow: "#FFD93D",
+                        dark: "#2E2E2E",
+                        cream: "#FFF8F0"
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    backgroundImage: {
+                        'gradient-glow': 'linear-gradient(135deg, #FF6B4A 0%, #9B6DFF 100%)',
+                        'gradient-hover': 'linear-gradient(135deg, #FF8B6A 0%, #AB7DFF 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(255, 217, 61, 0.3);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 30px rgba(255, 217, 61, 0.5);
+            transform: translateY(-2px);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-body text-dark bg-cream min-h-screen">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-heading font-bold text-coral">GlowBun</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#accueil" class="text-dark hover:text-coral transition-colors">Accueil</a>
+                    <a href="#menu" class="text-dark hover:text-coral transition-colors">Menu</a>
+                    <a href="#services" class="text-dark hover:text-coral transition-colors">Services</a>
+                    <a href="#about" class="text-dark hover:text-coral transition-colors">À propos</a>
+                    <a href="#contact" class="text-dark hover:text-coral transition-colors">Contact</a>
+                </div>
+                <button class="bg-gradient-glow text-white px-6 py-2 rounded-full glow-effect hover:bg-gradient-hover transition-all">
+                    Commander
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative bg-gradient-to-r from-coral/10 to-violet/10 py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold text-dark mb-6">
+                        GlowBun – Réinventez votre street-food
+                    </h1>
+                    <p class="text-xl text-dark/80 mb-8">
+                        Des buns lumineux et gourmands qui illuminent vos papilles !
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-gradient-glow text-white px-8 py-4 rounded-full glow-effect hover:bg-gradient-hover transition-all font-semibold">
+                            Commander Maintenant
+                        </button>
+                        <button class="border-2 border-coral text-coral px-8 py-4 rounded-full hover:bg-coral hover:text-white transition-all">
+                            Découvrir le Menu
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://picsum.photos/600/400?random=1" 
+                        alt="GlowBun foodtruck avec buns lumineux" 
+                        class="w-full rounded-2xl shadow-xl"
+                        loading="lazy"
+                    />
+                    <div class="absolute -top-4 -right-4 bg-yellow text-dark px-4 py-2 rounded-full font-semibold glow-effect">
+                        Nouveau !
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">Qui sommes-nous ?</h2>
+                <p class="text-lg text-dark/70 max-w-3xl mx-auto">
+                    GlowBun est un foodtruck branché qui transforme chaque bouchée en expérience inoubliable. 
+                    Nos buns lumineux sont préparés avec des ingrédients frais et locaux, offrant des recettes 
+                    créatives et gourmandes, parfaites pour tous les amateurs de street-food moderne et premium.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-coral/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-coral">🌱</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Ingrédients Locaux</h3>
+                    <p class="text-dark/60">Produits frais et de saison provenant de producteurs locaux</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-violet/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-violet">♻️</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Éco-responsable</h3>
+                    <p class="text-dark/60">Emballages compostables et impact environnemental réduit</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-yellow">🌍</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-2">Accessible à Tous</h3>
+                    <p class="text-dark/60">Options végétariennes, véganes et sans gluten disponibles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="menu" class="py-20 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">Nos Signature Buns</h2>
+                <p class="text-lg text-dark/70">
+                    Découvrez nos créations exclusives, une explosion de saveurs et un plaisir visuel !
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-2xl p-6 shadow-lg">
+                    <img 
+                        src="https://picsum.photos/400/300?random=2" 
+                        alt="GlowBun Signature" 
+                        class="w-full h-48 object-cover rounded-xl mb-4"
+                        loading="lazy"
+                    />
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-heading font-semibold text-xl">GlowBun Signature</h3>
+                        <span class="bg-coral text-white px-3 py-1 rounded-full text-sm font-semibold">Best-seller</span>
+                    </div>
+                    <p class="text-dark/60 mb-4">Pulled pork caramélisé, sauce corail au miel, pickles, roquette</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">€9.50</span>
+                        <button class="bg-gradient-glow text-white px-4 py-2 rounded-full glow-effect hover:bg-gradient-hover transition-all">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-2xl p-6 shadow-lg">
+                    <img 
+                        src="https://picsum.photos/400/300?random=3" 
+                        alt="Neon Bao Végétarien" 
+                        class="w-full h-48 object-cover rounded-xl mb-4"
+                        loading="lazy"
+                    />
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-heading font-semibold text-xl">Neon Bao</h3>
+                        <span class="bg-violet text-white px-3 py-1 rounded-full text-sm font-semibold">Vegan</span>
+                    </div>
+                    <p class="text-dark/60 mb-4">Bao vapeur, falafel aux herbes, mayo citronnée, chou croquant</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">€8.00</span>
+                        <button class="bg-gradient-glow text-white px-4 py-2 rounded-full glow-effect hover:bg-gradient-hover transition-all">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card bg-white rounded-2xl p-6 shadow-lg">
+                    <img 
+                        src="https://picsum.photos/400/300?random=4" 
+                        alt="SeaGlow" 
+                        class="w-full h-48 object-cover rounded-xl mb-4"
+                        loading="lazy"
+                    />
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="font-heading font-semibold text-xl">SeaGlow</h3>
+                        <span class="bg-yellow text-dark px-3 py-1 rounded-full text-sm font-semibold">Nouveau</span>
+                    </div>
+                    <p class="text-dark/60 mb-4">Bun noir, filet de poisson croustillant, sauce citronnée, coriandre</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">€10.00</span>
+                        <button class="bg-gradient-glow text-white px-4 py-2 rounded-full glow-effect hover:bg-gradient-hover transition-all">
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button class="border-2 border-coral text-coral px-8 py-4 rounded-full hover:bg-coral hover:text-white transition-all font-semibold">
+                    Voir tout le Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">Nos Services</h2>
+                <p class="text-lg text-dark/70">Découvrez toutes les façons de profiter de GlowBun</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-cream rounded-2xl">
+                    <div class="w-16 h-16 bg-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-coral">📱</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-3">Click & Collect</h3>
+                    <p class="text-dark/60 mb-4">Commandez en ligne et récupérez vos buns à l'heure souhaitée</p>
+                    <button class="bg-coral text-white px-4 py-2 rounded-full hover:bg-coral/80 transition-all">
+                        Précommander
+                    </button>
+                </div>
+                <div class="text-center p-6 bg-cream rounded-2xl">
+                    <div class="w-16 h-16 bg-violet/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-violet">🚚</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-3">Livraison</h3>
+                    <p class="text-dark/60 mb-4">Vos buns préférés directement chez vous en quelques minutes</p>
+                    <button class="bg-violet text-white px-4 py-2 rounded-full hover:bg-violet/80 transition-all">
+                        Se faire livrer
+                    </button>
+                </div>
+                <div class="text-center p-6 bg-cream rounded-2xl">
+                    <div class="w-16 h-16 bg-yellow/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-yellow">🎉</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-3">Événements</h3>
+                    <p class="text-dark/60 mb-4">Glow your party ! Soirées privées ou événements corporate</p>
+                    <button class="bg-yellow text-dark px-4 py-2 rounded-full hover:bg-yellow/80 transition-all">
+                        Organiser
+                    </button>
+                </div>
+                <div class="text-center p-6 bg-cream rounded-2xl">
+                    <div class="w-16 h-16 bg-coral/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-coral">⭐</span>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg mb-3">Glow Club</h3>
+                    <p class="text-dark/60 mb-4">Abonnement hebdo pour ne jamais manquer vos buns favoris</p>
+                    <button class="bg-gradient-glow text-white px-4 py-2 rounded-full glow-effect hover:bg-gradient-hover transition-all">
+                        Rejoindre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gradient-to-r from-coral/10 to-violet/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-4">Ce que nos clients disent</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-coral/10 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-coral">C</span>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold">Clara D.</h4>
+                            <div class="flex text-yellow">
+                                <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark/60">"Le meilleur foodtruck de la ville ! Mes buns préférés toutes les semaines."</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-violet/10 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-violet">J</span>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold">Julien M.</h4>
+                            <div class="flex text-yellow">
+                                <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark/60">"Une expérience street-food chic et fun, je recommande à tous mes amis !"</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow/10 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-yellow">S</span>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-semibold">Sophie L.</h4>
+                            <div class="flex text-yellow">
+                                <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-dark/60">"GlowBun a illuminé notre soirée d'entreprise, service impeccable."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-dark mb-6">Où nous trouver ?</h2>
+                    <p class="text-lg text-dark/70 mb-8">
+                        Retrouvez-nous dans votre quartier ou réservez votre événement. 
+                        Horaires flexibles, service rapide et ambiance lumineuse garantie !
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <span class="w-8 h-8 bg-coral/10 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-coral">📍</span>
+                            </span>
+                            <span>Foodtruck mobile - Paris et région parisienne</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-8 h-8 bg-violet/10 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-violet">⏰</span>
+                            </span>
+                            <span>Lun-Sam: 11h-22h | Dim: 12h-20h</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-8 h-8 bg-yellow/10 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-yellow">📞</span>
+                            </span>
+                            <span>+33 1 23 45 67 89</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cream rounded-2xl p-8">
+                    <h3 class="text-2xl font-heading font-semibold mb-6">Contactez-nous</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 rounded-lg border border-dark/20 focus:border-coral focus:ring-2 focus:ring-coral/20">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Votre email" class="w-full px-4 py-3 rounded-lg border border-dark/20 focus:border-coral focus:ring-2 focus:ring-coral/20">
+                        </div>
+                        <div>
+                            <textarea placeholder="Votre message" rows="4" class="w-full px-4 py-3 rounded-lg border border-dark/20 focus:border-coral focus:ring-2 focus:ring-coral/20"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-glow text-white py-3 rounded-lg glow-effect hover:bg-gradient-hover transition-all font-semibold">
+                            Envoyer un message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-heading font-bold text-coral mb-4">GlowBun</h3>
+                    <p class="text-white/70">Street-food qui brille de saveurs</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-white/70 hover:text-coral transition-colors">Accueil</a></li>
+                        <li><a href="#menu" class="text-white/70 hover:text-coral transition-colors">Menu</a></li>
+                        <li><a href="#services" class="text-white/70 hover:text-coral transition-colors">Services</a></li>
+                        <li><a href="#contact" class="text-white/70 hover:text-coral transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white/70 hover:text-coral transition-colors">Click & Collect</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-coral transition-colors">Livraison</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-coral transition-colors">Événements</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-coral transition-colors">Glow Club</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-coral rounded-full flex items-center justify-center hover:bg-coral/80 transition-colors">
+                            <span class="text-white">📱</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-violet rounded-full flex items-center justify-center hover:bg-violet/80 transition-colors">
+                            <span class="text-white">📸</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-yellow rounded-full flex items-center justify-center hover:bg-yellow/80 transition-colors">
+                            <span class="text-dark">💬</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-white/60">© 2024 GlowBun. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Product data
+        const products = [
+            {
+                id: 1,
+                name: "GlowBun Signature",
+                price: 9.50,
+                description: "Pulled pork caramélisé, sauce corail au miel, pickles, roquette",
+                image: "https://picsum.photos/400/300?random=2",
+                tags: ["best-seller"],
+                prepTime: "6-8 min"
+            },
+            {
+                id: 2,
+                name: "Neon Bao",
+                price: 8.00,
+                description: "Bao vapeur, falafel aux herbes, mayo citronnée, chou croquant",
+                image: "https://picsum.photos/400/300?random=3",
+                tags: ["vegan"],
+                prepTime: "5-7 min"
+            },
+            {
+                id: 3,
+                name: "SeaGlow",
+                price: 10.00,
+                description: "Bun noir, filet de poisson croustillant, sauce citronnée, coriandre",
+                image: "https://picsum.photos/400/300?random=4",
+                tags: ["nouveau"],
+                prepTime: "7-9 min"
+            }
+        ];
+
+        // Add to cart functionality
+        document.querySelectorAll('.product-card button').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                const product = products[index];
+                // Play sound effect (would need actual sound file)
+                console.log(`Added to cart: ${product.name}`);
+                
+                // Show confirmation
+                button.textContent = "✓ Ajouté";
+                button.classList.add('bg-green-500');
+                setTimeout(() => {
+                    button.textContent = "Ajouter";
+                    button.classList.remove('bg-green-500');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
